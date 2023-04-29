@@ -93,10 +93,10 @@ app.post("/events", async (req, res) => {
             }, 300000);
           }
         }
-      } else if (req.body.type === "url_verification") {
+      } 
+    } else if (req.body.type === "url_verification") {
         res.send(req.body.challenge);
       }
-    }
   } catch (error) {
     logger.error("Error processing request:", error);
     res.status(500).send("Internal Server Error");
